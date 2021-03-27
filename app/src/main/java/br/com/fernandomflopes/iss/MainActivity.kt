@@ -2,18 +2,12 @@ package br.com.fernandomflopes.iss
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.webkit.JavascriptInterface
 import androidx.lifecycle.lifecycleScope
 import br.com.fernandomflopes.iss.databinding.ActivityMainBinding
 import br.com.fernandomflopes.issapiwrapper.iss.ISS
-import br.com.fernandomflopes.issapiwrapper.model.ISSNow
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.collect
-import kotlinx.coroutines.flow.flow
-import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,16 +15,20 @@ class MainActivity : AppCompatActivity() {
         ActivityMainBinding.inflate(layoutInflater)
     }
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        binding.webView.settings.javaScriptEnabled = true
 
         lifecycleScope.launch {
-            ISS().getNow(1000).collect {
+            ISS().getNow(3000).collect {
+
                 binding.txtLongitude.text = it.position.longitude.toString()
                 binding.txtLatitude.text = it.position.latitude.toString()
+                binding.webView
+                        .loadUrl("file:///android_asset/hello.html?lat=${it.position.latitude}&lng=${it.position.longitude}")
             }
         }
+
     }
 }

@@ -7,7 +7,6 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
-import okhttp3.OkHttp
 import okhttp3.OkHttpClient
 import okhttp3.Request
 
@@ -26,7 +25,7 @@ class ISS {
         return Gson().fromJson(responseText, ISSNow::class.java)
     }
 
-    fun getNow(delayInMillis: Long) : Flow<ISSNow> {
+    suspend fun getNow(delayInMillis: Long) : Flow<ISSNow> {
         return flow<ISSNow> {
             while(true) {
                 emit(getNow())
