@@ -7,12 +7,24 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/txtLatitude"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/txtLongitude"
+        app:layout_constraintHorizontal_bias="0.726"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="0" />
 
+    <TextView
+        android:id="@+id/txtLongitude"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="104dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtLatitude"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtLatitude"
+        tools:text="0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
