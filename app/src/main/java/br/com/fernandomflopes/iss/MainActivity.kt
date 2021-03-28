@@ -18,15 +18,13 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-        binding.webView.settings.javaScriptEnabled = true
 
         lifecycleScope.launch {
             ISS().getNow(3000).collect {
 
                 binding.txtLongitude.text = it.position.longitude.toString()
                 binding.txtLatitude.text = it.position.latitude.toString()
-                binding.webView
-                        .loadUrl("file:///android_asset/hello.html?lat=${it.position.latitude}&lng=${it.position.longitude}")
+
             }
         }
 
