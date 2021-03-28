@@ -1,6 +1,7 @@
 # AndroidOpenApiFromSpaceWrapperLib
 
-Este projeto facilita o acesso da [Open Space API](http://open-notify.org/)
+Este projeto facilita o acesso da [Open Space API](http://open-notify.org/). É fornecido informações reais de localização da Estação Espacial Internacional ISS
+
 
 * A Main activity esta bem simples, servindo apenas para apresentar a utilidade do mudulo 
 * [link do modulo](https://github.com/fernandomflopes/AndroidOpenApiFromSpaceWrapperLib/tree/master/ISSAPIWrapper)
