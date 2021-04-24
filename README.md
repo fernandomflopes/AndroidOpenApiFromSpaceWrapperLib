@@ -22,19 +22,27 @@ Este projeto facilita o acesso da [Open Space API](http://open-notify.org/). É 
         ETC ...
 
 ```
-* build.gradle(:app)
+* build.gradle (Project)
 
 ```gradle
-dependencies {
-  ...
-  
-  implementation project(":ISSAPIWrapper")
-  
-  ETC...
+
+allprojects {
+	repositories {
+		...
+		maven { url 'https://jitpack.io' }
+	}
 }
+```
+* build.gradle (Module)
+```gradle
+dependencies {
+    implementation 'com.github.fernandomflopes:AndroidOpenApiFromSpaceWrapperLib:1.0.0'
+}
+
 ```
 
 # Exemplo de utilizacao
+
 
 ```kotlin
 
