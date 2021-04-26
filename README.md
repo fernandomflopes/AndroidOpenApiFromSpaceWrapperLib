@@ -4,12 +4,11 @@ Este projeto facilita o acesso da [Open Space API](http://open-notify.org/). É 
 
 ![image](https://github.com/fernandomflopes/AndroidOpenApiFromSpaceWrapperLib/blob/master/media/ex01.png)
 
-* A Main activity esta bem simples, servindo apenas para apresentar a utilidade do modulo 
 * [link do modulo](https://github.com/fernandomflopes/AndroidOpenApiFromSpaceWrapperLib/tree/master/ISSAPIWrapper)
 
+* Insira sua chave do google maps para poder visualizar o exemplo
+
 # Utilizacão
-
-
 
 * AndroidManifest.xml
 ```XML
