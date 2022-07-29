@@ -8,7 +8,7 @@ Este projeto facilita o acesso da [Open Space API](http://open-notify.org/). É 
 
 * Insira sua chave do google maps para poder visualizar o exemplo
 
-# Utilizacão
+# Utilização
 
 * AndroidManifest.xml
 ```XML
@@ -40,7 +40,7 @@ dependencies {
 
 ```
 
-# Exemplo de utilizacao
+# Exemplo de utilização
 
 
 ```kotlin
